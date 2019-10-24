@@ -9,31 +9,36 @@
 <body>
     <form action="#" method="post" class="html5">
 
-        <label for="login" class="lbl">Логин: </label>
-        <input type="text" id="login" class="inpt">
 
-        <label for="pswd" class="lbl">Пароль: </label>
-        <input type="password" id="pswd" class="inpt">
+        <div class="form=group">
+            <label for="login" class="lbl-header">Логин: </label>
+            <input type="text" id="login" class="inpt">
+        </div>
 
-       
-        <label for="">Пол:</label>
-        
-        <label for="m">Муж</label>
-         <input type="radio" id="m" checked name="sex">
-        <label for="w">Жен</label> <input type="radio" id="w" name="sex">
+        <div class="form=group">
+            <label class="lbl" for="pswd" class="lbl-header">Пароль: </label>
+            <input type="password" id="pswd" class="inpt">
+        </div>
 
-       
-        <label for="">Интересы</label>
-        
-        <label for="football">Футбол</label>
-         <input type="checkbox" id="football" name="hobbi">
-         
-        <label for="cats">Котики</label>
-         <input type="checkbox" id="cats" name="hobbi">
-         
-        <label for="Inet">Инет</label>
-         <input type="checkbox" id="Inet" name="hobbi">
+        <label class="lbl-header" for="">Пол:</label>
 
+        <div class="form=group">
+            <label class="lbl" for="m">Муж</label><input type="radio" id="m" checked name="sex">
+            <label class="lbl" for="w">Жен</label><input type="radio" id="w" name="sex">
+        </div>
+
+        <label class="lbl-header" for="">Интересы:</label>
+
+        <div class="form=group">
+            <label class="lbl" for="football">Футбол</label>
+            <input type="checkbox" id="football" name="hobbi">
+
+            <label class="lbl" for="cats">Котики</label>
+            <input type="checkbox" id="cats" name="hobbi">
+
+            <label class="lbl" for="Inet">Инет</label>
+            <input type="checkbox" id="Inet" name="hobbi">
+        </div>
 
     </form>
 </body>
