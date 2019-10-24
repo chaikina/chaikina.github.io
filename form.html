@@ -11,7 +11,7 @@
 
 
         <div class="form=group">
-            <label for="login" class="lbl-header">Логин: </label>
+            <label for="login" class="lbl-header">Логин:</label>
             <input type="text" id="login" class="inpt">
         </div>
 
@@ -23,8 +23,11 @@
         <label class="lbl-header" for="">Пол:</label>
 
         <div class="form=group">
-            <label class="lbl" for="m">Муж</label><input type="radio" id="m" checked name="sex">
-            <label class="lbl" for="w">Жен</label><input type="radio" id="w" name="sex">
+            <input type="radio" id="m" checked name="sex">
+            <label class="lbl" for="m">Муж</label>
+            
+            <input type="radio" id="w" name="sex">
+            <label class="lbl" for="w">Жен</label>
         </div>
 
         <label class="lbl-header" for="">Интересы:</label>
@@ -39,7 +42,12 @@
             <label class="lbl" for="Inet">Инет</label>
             <input type="checkbox" id="Inet" name="hobbi">
         </div>
-
+        
+<!--      .form-group>input+button-->
+     
+      <div class="form-group">
+      <input type="reset" value="Очистить">
+      <button type="submit" >Отправить</button></div>
     </form>
 </body>
 
