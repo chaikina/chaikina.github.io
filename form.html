@@ -6,22 +6,22 @@
     <title>Элементы формы</title>
     <style>
         .form-html5 {
-            background-color: rgba(72, 220, 247, 0.56);
-            background-image: linear-gradient(to left, rgba(200, 236, 255, 0.6), rgba(121, 162, 255, 0.34));
+            background-color: rgba(165, 241, 255, 0.56);
+            background-image: linear-gradient(to top, rgba(247, 252, 255, 0.6), rgba(121, 162, 255, 0.34));
             /*            width: 50%;*/
 
-            max-width: 700px;
-            min-height: 400px;
+            max-width: 400px;
+            min-height: 250px;
             border: 8px groove #b6b6d1;
             /*            solid dotted (точками) dashed(пунктиром) groove(двойная рамка) ridge inset outset double - разные формы рамочки*/
             /*            border-left: 50px solid red;*/
 
-            border-radius: 50px;
+            border-radius: 20px;
 
             margin-left: auto;
             margin-right: auto;
 
-            padding: 15px;
+            padding: 35px;
         }
 
         .form-group {
@@ -33,7 +33,7 @@
             font-size: 13px;
             font-weight: 700;
             font-family: "verdana", sans-serif;
-            color: rgba(4, 71, 250, 0.3);
+            color: rgba(1, 9, 33, 0.56);
             text-transform: uppercase;
         }
 
@@ -54,23 +54,39 @@
 
             box-shadow: 2px 2px 5px 1px #6fffa1;
             box-shadow: 2px 2px 5px 3px #ff6fff;
-            transition: transform 50ms;
+            transition: scale(1.05);
+
+            transition: transform 500ms;
         }
 
         .btn:hover {
-            transform: scale(1.1) translate(50px);
+            transform: scale(1.1);
+
+            /*                translate(50px);*/
             cursor: pointer;
-            color: #2df02d;
+            color: #aff0ff;
         }
 
         .btn-reset {
-            background-color: #afa5ff;
-            margin-right: 10px;
+            background-color: #7f90cb;
+            margin-right: 20px;
         }
 
         .btn-submit {
             background-color: #c15555;
 
+        }
+        
+        .text-deivery{
+        align-content: top;
+            margin-top: 20px;
+        }
+        
+        legend{
+            color: #d9163b;
+            font-size: 20px;
+            font-family: sans-serif
+                
         }
 
     </style>
@@ -78,16 +94,96 @@
 
 <body>
     <form action="#" method="post" class="form-html5">
+        
+        <h2> Анкета покупателя</h2>
 
-        <div class="form-group">
+        <fieldset>
+        <legend>Основные данные</legend>
+<!--           fieldset - образует группы визуально-->
+            
+    
+           <div class="form-group">
             <label for="login" class="lbl-header">Логин:</label>
-            <input type="text" id="login" class="inpt">
+            <input type="text" id="login" class="inpt" value="" placeholder="Ivanov">
         </div>
+        <!--    value="" - отправляет на сервер placeholder="Ivanov" - это просто подсказка>-->
 
         <div class="form-group">
             <label for="pswd" class="lbl-header">Пароль: </label>
-            <input type="password" id="pswd" class="inpt">
+            <input type="password" id="pswd" class="inpt" required> </div>
+
+        <div class="form-group">
+            <label for="tel" class="lbl-header">Телефон: </label>
+            <input type="tel" id="tel" class="inpt" placeholder="7-123-345-67-89" pattern="7-[0-9][3]-[0-9][3]-[0-9][2]-[0-9][2]">
         </div>
+
+        <!--            pattern - paзадает регулярное выражение полю на проверку например телефон можно найти в интернете-->
+        <!--
+            placeholder - подсказка
+            checked - отмечено
+            required - надо обязательно заполнить, не отправить
+            readonly - не позволяет редактировать, но можно скопировать
+            disabled - не дает выбрать, или обязательно отмечен(если checked)
+    
+-->
+        <div class="form-group">
+            <label for="e-mail" class="lbl-header">E-mail </label>
+            <input type="e-mail" id="e-mail" class="inpt" required placeholder="dfgh@fghj.ru"> </div>
+
+        <div class="form-group">
+            <label for="date" class="lbl-header">Дата </label>
+            <input type="date" id="date" class="inpt"> </div>
+            
+             </fieldset>
+
+        <!--            type week - неделя-->
+
+        <div class="form-group">
+            <label for="num" class="lbl-header">Кол-во </label>
+            <input type="number" id="num" class="inpt" min="1" max="100" step="5"> </div>
+
+        <div class="form-group">
+            <label for="range" class="lbl-header">Возраст </label>
+            <span>10</span>
+            <input type="range" id="range" class="inpt" min="10" max="80" step="1"> <span>80</span>
+            <input type="text">
+            <!--            чтобы в окошке писался возраст - надо java script-->
+        </div>
+
+        <div class="form-group">
+            <label for="countries" class="lbl-header">Cтраны </label>
+
+            <select name="countries" id="countries">
+                <!--                multiple можно выбрать несколько-->
+
+                <!--            name - задает значение переменной, которая задается на сервере для PHP value- значение, которое передается на сервер и записывается в поле name, в нашем случаи countries-->
+
+                <optgroup label="ЮЗАО">
+                    <option value="ru">Россия</option>
+                    <option value="by">Белорусь</option>
+                </optgroup>
+
+                <optgroup label="ВЗАО">
+                    <option value="ru">Бутово</option>
+                    <option value="by">марьино</option>
+                </optgroup>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="color" class="lbl-header">Ваш цвет </label>
+            <input type="color" class="inpt" value="#ff0000">
+        </div>
+
+        <div class="form-group">
+<label for="date" class="lbl-header">Комментарий </label>
+            <textarea name="delivery" placeholder="Адрес доставки" class="text-deivery"></textarea>
+        </div>
+         <div class="form-group">
+            <label for="file" class="lbl-header">Загрузи файл </label>
+            <input type="file" class="inpt">
+        </div>
+
+
 
         <div class="form-group">
             <label class="lbl-header" for="">Пол:</label>
