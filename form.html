@@ -76,17 +76,30 @@
             background-color: #c15555;
 
         }
-        
-        .text-deivery{
-        align-content: top;
+
+        .text-deivery {
+            align-content: top;
             margin-top: 20px;
         }
-        
-        legend{
+
+        legend {
             color: #d9163b;
             font-size: 20px;
             font-family: sans-serif
-                
+        }
+
+        @media(max-width: 1000px) {
+            body {
+                background-color: #c10404;
+            }
+
+            .fld-add {
+                display: none;
+            }
+
+            .lbl-header {
+                color: rgb(186, 10, 10);
+            }
         }
 
     </style>
@@ -94,31 +107,31 @@
 
 <body>
     <form action="#" method="post" class="form-html5">
-        
+
         <h2> Анкета покупателя</h2>
 
         <fieldset>
-        <legend>Основные данные</legend>
-<!--           fieldset - образует группы визуально-->
-            
-    
-           <div class="form-group">
-            <label for="login" class="lbl-header">Логин:</label>
-            <input type="text" id="login" class="inpt" value="" placeholder="Ivanov">
-        </div>
-        <!--    value="" - отправляет на сервер placeholder="Ivanov" - это просто подсказка>-->
+            <legend>Основные данные</legend>
+            <!--           fieldset - образует группы визуально-->
 
-        <div class="form-group">
-            <label for="pswd" class="lbl-header">Пароль: </label>
-            <input type="password" id="pswd" class="inpt" required> </div>
 
-        <div class="form-group">
-            <label for="tel" class="lbl-header">Телефон: </label>
-            <input type="tel" id="tel" class="inpt" placeholder="7-123-345-67-89" pattern="7-[0-9][3]-[0-9][3]-[0-9][2]-[0-9][2]">
-        </div>
+            <div class="form-group">
+                <label for="login" class="lbl-header">Логин:</label>
+                <input type="text" id="login" class="inpt" value="" placeholder="Ivanov">
+            </div>
+            <!--    value="" - отправляет на сервер placeholder="Ivanov" - это просто подсказка>-->
 
-        <!--            pattern - paзадает регулярное выражение полю на проверку например телефон можно найти в интернете-->
-        <!--
+            <div class="form-group">
+                <label for="pswd" class="lbl-header">Пароль: </label>
+                <input type="password" id="pswd" class="inpt" required> </div>
+
+            <div class="form-group">
+                <label for="tel" class="lbl-header">Телефон: </label>
+                <input type="tel" id="tel" class="inpt" placeholder="7-123-345-67-89" pattern="7-[0-9][3]-[0-9][3]-[0-9][2]-[0-9][2]">
+            </div>
+
+            <!--            pattern - paзадает регулярное выражение полю на проверку например телефон можно найти в интернете-->
+            <!--
             placeholder - подсказка
             checked - отмечено
             required - надо обязательно заполнить, не отправить
@@ -126,15 +139,15 @@
             disabled - не дает выбрать, или обязательно отмечен(если checked)
     
 -->
-        <div class="form-group">
-            <label for="e-mail" class="lbl-header">E-mail </label>
-            <input type="e-mail" id="e-mail" class="inpt" required placeholder="dfgh@fghj.ru"> </div>
+            <div class="form-group">
+                <label for="e-mail" class="lbl-header">E-mail </label>
+                <input type="e-mail" id="e-mail" class="inpt" required placeholder="dfgh@fghj.ru"> </div>
 
-        <div class="form-group">
-            <label for="date" class="lbl-header">Дата </label>
-            <input type="date" id="date" class="inpt"> </div>
-            
-             </fieldset>
+            <div class="form-group">
+                <label for="date" class="lbl-header">Дата </label>
+                <input type="date" id="date" class="inpt"> </div>
+
+        </fieldset>
 
         <!--            type week - неделя-->
 
@@ -175,10 +188,10 @@
         </div>
 
         <div class="form-group">
-<label for="date" class="lbl-header">Комментарий </label>
+            <label for="date" class="lbl-header">Комментарий </label>
             <textarea name="delivery" placeholder="Адрес доставки" class="text-deivery"></textarea>
         </div>
-         <div class="form-group">
+        <div class="form-group">
             <label for="file" class="lbl-header">Загрузи файл </label>
             <input type="file" class="inpt">
         </div>
