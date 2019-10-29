@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Сетка</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <style>
+        body {
+            background-color: #e0edce;
+        }
+        
+        header,
+        footer {
+            background-color: #020622;
+            color: #ffffff;
+            
+            outline: 5px solid #e3db09;
+        }
+        
+        .container {
+            outline: 5px solid #e04111;
+        }
+        
+        main {
+            min-height: 400px;
+        }
+        .h-col1,
+        .f-col1 {
+            background-color: #f87777;
+        }
+        
+        .h-col2,
+        .f-col2 {
+            background-color: #9a9af7;
+        }
+        .h-col3,
+        .f-col3 {
+            background-color: #53c653;
+        }
+        .r1-m-col1,
+        .r1-m-col2,
+        .r1-m-col3,
+        .r1-m-col4,
+        .r1-m-col5 {
+            background-color: #f7cf87;
+            border: 1px solid #000;
+        }
+        
+        .r2-m-col1,
+        .r2-m-col2,
+        .r2-m-col3,
+        .r2-m-col4,
+        .r2-m-col5 {
+            background-color: #b7b1b1;
+            border: 1px solid #000;
+        }
+        
+    </style>
+
+</head>
+
+<body>
+
+    <!--    header.container-fluid(.row)+main.container(.row*2)+footer.container-fluid(.row)-->
+
+    <header class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="d-md-block col-sm-6 col-md-3 col-lg-4 h-col1">h-col1</div>
+                <div class="col-sm-6 h-col2">h-col2</div>
+                <div class="d-sm-none d-md-block col-md-3 col-lg-2 h-col3">h-col3</div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="row">
+            <div class="col-sm-12 r1-m-col1">m-r1-col1</div>
+            <div class="col-sm-12 col-md-6 col-lg-3 r1-m-col2">m-r1-col2</div>
+            <div class="col-sm-12 col-md-6 col-lg-3 r1-m-col3">m-r1-col3</div>
+            <div class="d-none d-md-block col-md-6 col-lg-3 r1-m-col4">m-r1-col4</div>
+            <div class="d-none d-md-block col-md-6 col-lg-3 r1-m-col5">m-r1-col5</div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6 col-md-5 col-lg-6 r2-m-col1">m-r2-col1</div>
+            <div class="col-sm-6 col-md-5 r2-m-col2">m-r2-col2</div>
+            <div class="d-none d-md-block col-md-2 col-lg-1 r2-m-col3">m-r2-col3</div>
+            <div class="col-sm-8 col-md-12 col-lg-4 r2-m-col4">m-r2-col4</div>
+            <div class="col-sm-4 col-md-12 col-lg-8 r2-m-col5">m-r2-col5</div>
+        </div>
+    </main>
+
+    <footer class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-4 col-lg-2 f-col1">f-col1</div>
+                <div class="col-sm-12 col-md-8 col-lg-8 f-col2">f-col2</div>
+                <div class="d-none d-lg-block col-md-3 col-lg-2 f-col3">f-col3</div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+
+</html>
